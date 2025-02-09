@@ -4,6 +4,6 @@ resource "local_file" "samplefile" {
 }
 
 resource "local_file" "samplefile2" {
-  filename2 = var.filename2
+  filename = var.filename2
   content = "This is the second sample file created"
 }
