@@ -3,5 +3,5 @@ variable "filename" {
 }
 
 variable "filename2" {
-  default = "samplefile2"
+  default = "samplefile3"
 }
