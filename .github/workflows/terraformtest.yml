@@ -10,7 +10,7 @@ on:
 
 jobs:
   terraform:
-    name: Terraform Init & Plan
+    name: Terraform Init & Plan & Apply
     runs-on: ubuntu-latest
 
     steps:
@@ -29,4 +29,7 @@ jobs:
         run: terraform validate
 
       - name: Terraform Plan
-        run: terraform plan
+        run: terraform plan 
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve 
