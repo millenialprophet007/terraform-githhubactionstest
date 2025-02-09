@@ -20,8 +20,10 @@ jobs:
         with:
           terraform_version: latest
 
-      - name: Terraform Format Check
-        run: terraform fmt -check -recursive
+      - name: Terraform Format Check and Fix
+        run: |
+          terraform fmt -recursive
+          git diff --exit-code || (echo "Formatting issues fixed. Please commit the changes." && exit 1)
 
       - name: Initialize Terraform
         run: terraform init
