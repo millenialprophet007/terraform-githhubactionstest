@@ -1,9 +1,9 @@
 resource "local_file" "samplefile" {
-  filename = "samplefile.txt"
+  filename = var.filename
   content = "hello world"
 }
 
 resource "local_file" "samplefile2" {
-  filename = "samplefile2.txt"
+  filename2 = var.filename2
   content = "This is the second sample file created"
 }
