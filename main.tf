@@ -7,6 +7,10 @@ output "samplefile_content" {
   value = local_file.samplefile.content
 }
 
+output "samplefile2_content" {
+  value = local_file.samplefile2.content
+}
+
 resource "local_file" "samplefile2" {
   filename = "samplefile2.txt"
   content = "This is the second sample file created"
